@@ -10,7 +10,8 @@ class QuotesSpyder(scrapy.Spider):
     ]
     custom_settings = {
         'FEED_URI':'quotes.json',
-        'FEED_FORMAT': 'json'
+        'FEED_FORMAT': 'json',
+        'ROBOTSTXT_OBEY': True,
     }
     
     def parse_only_quotes(self,response,**kwargs):
